@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ✨</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#ffd6e7,#e9d5ff);display:flex;justify-content:center;align-items:center;height:100vh;}
+.card{background:white;width:85%;max-width:380px;padding:25px;border-radius:25px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.15);}
+.page{display:none}.active{display:block}
+button{margin-top:20px;padding:12px 22px;border:none;border-radius:999px;background:#ff7eb6;color:white;font-size:16px;}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="page active">
+<h2>OHHH, YOU'RE HEREEEE! ✨</h2>
+<p>I thought you'd ignore this link.</p>
+<p>Welcome, you menace. 😭🫶</p>
+<button onclick="next()">Next →</button>
+</div>
+
+<div class="page">
+<h2>Okay okay... don't close it yet. 😭</h2>
+<p>It'll only take like... 30 seconds.</p>
+<p>This isn't a homework presentation, I swear. 💀</p>
+<button onclick="next()">Next →</button>
+</div>
+
+<div class="page">
+<h2>Alright, serious mode. 🤏</h2>
+<p>I messed up.</p>
+<p>I kept making those jokes thinking they were funny, but I get that they actually scared you.</p>
+<p>That's on me.</p>
+<button onclick="next()">Next →</button>
+</div>
+
+<div class="page">
+<h2>Thank you for caring.</h2>
+<p>If you didn't care, you probably wouldn't have gotten that mad.</p>
+<p>I'm not trying to erase what happened—I just wanted you to know I understand why you were upset.</p>
+<button onclick="next()">Next →</button>
+</div>
+
+<div class="page">
+<h2>End of the tour. 🎉</h2>
+<p>Thanks for actually reading all this.</p>
+<p>You can stay mad for a bit if you need to—I just wanted to say I'm sorry.</p>
+<p>Now go drink some water or something. 😭🤝</p>
+</div>
+</div>
+
+<script>
+let i=0;
+const pages=document.querySelectorAll(".page");
+function next(){
+pages[i].classList.remove("active");
+i++;
+pages[i].classList.add("active");
+}
+</script>
+</body>
+</html>
